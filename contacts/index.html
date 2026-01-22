@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ремонт без забот — Ремонт квартир</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="contacts.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a href="../" class="logo">Ремонт без забот</a>
+
+        <nav class="nav" id="nav">
+    <a href="../portfolio/index.html">Портфолио и отзывы</a>
+    <a href="../index.html#services">Услуги</a>
+    <a href="../master/index.html" class="nav-accent">Оставить заявку</a>
+    <a href="../contacts/index.html">Контакты</a> 
+</nav>
+
+<button class="burger" id="burger" aria-label="Открыть меню">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+        <div class="header-contacts">
+            <a href="tel:+79999999999" class="phone">+7 (999) 999-99-99</a>
+            <span class="info">Санкт-Петербург · 8:00–22:00</span>
+        </div>
+
+    </div>
+</header>
+
+<section class="contacts">
+    <div class="container">
+
+        <h2 class="contacts-title">Наши контакты для связи</h2>
+
+        <div class="contacts-list">
+
+            <div class="contact-item">
+                <span class="icon">📞</span>
+                <a href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon">💬</span>
+                <a href="https://wa.me/79999999999" target="_blank">WhatsApp</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="icon">✈️</span>
+                <a href="https://t.me/username" target="_blank">Telegram</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<script>
+const burger = document.getElementById('burger');
+const nav = document.getElementById('nav');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
+nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        nav.classList.remove('active');
+    });
+});
+</script>
+
+</body>
+</html>
